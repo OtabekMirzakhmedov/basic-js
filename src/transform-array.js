@@ -15,7 +15,7 @@ const { NotImplementedError } = require('../extensions/index.js');
  */
 function transform(arr) {
   if (!Array.isArray(arr)) {
-    throw new Error('Input must be an array');
+    throw new Error('\'arr\' parameter must be an instance of the Array!');
   }
 
   const result = [];
@@ -47,6 +47,8 @@ function transform(arr) {
 
   return result;
 }
+
+transform([1, 2, 3, '--discard-next', 1337, '--double-prev', 4, 5])
 
 module.exports = {
   transform
